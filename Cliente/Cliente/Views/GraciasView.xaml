@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cliente.Views.GraciasView" Background="#f5ebdb" NavigationPage.HasNavigationBar="False">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout.Resources>
+            <Style TargetType="Button">
+                <Setter Property="WidthRequest" Value="70"></Setter>
+                <Setter Property="HeightRequest" Value="40"></Setter>
+                <Setter Property="CornerRadius" Value="60"></Setter>
+                <Setter Property="FontFamily" Value="BurgerKing"></Setter>
+                <Setter Property="TextColor" Value="#f5ebdb"></Setter>
+                <Setter Property="BackgroundColor" Value="Orange"></Setter>
+                <Setter Property="Margin" Value="0,30"></Setter>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="Medium"></Setter>
+                <Setter Property="FontFamily" Value="BurgerKing"></Setter>
+                <Setter Property="TextColor" Value="#502314"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+            </Style>
+        </StackLayout.Resources>
+        
+        
+        <Label>¡Gracias por darnos tu opinión!</Label>
+        <Label>¡La tomaremos en cuenta!</Label>
+
+        <Button Text="Salir de la aplicación"></Button>
+    </StackLayout>
+</ContentPage>

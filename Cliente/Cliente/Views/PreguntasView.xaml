@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             xmlns:vm="clr-namespace:Cliente.ViewModels"
+             x:Class="Cliente.Views.PreguntasView" Background="#f5ebdb" NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <vm:ClienteViewModel></vm:ClienteViewModel>
+    </ContentPage.BindingContext>
+    <StackLayout Margin="10,30">
+        <StackLayout.Resources>
+            <Style TargetType="Button">
+                <Setter Property="WidthRequest" Value="40"></Setter>
+                <Setter Property="HeightRequest" Value="40"></Setter>
+                <Setter Property="CornerRadius" Value="60"></Setter>
+                <Setter Property="FontFamily" Value="BurgerKing"></Setter>
+                <Setter Property="TextColor" Value="#f5ebdb"></Setter>
+                <Setter Property="BackgroundColor" Value="Orange"></Setter>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="BurgerKing"></Setter>
+                <Setter Property="TextColor" Value="#502314"></Setter>
+            </Style>
+        </StackLayout.Resources>
+
+
+        <StackLayout Margin="0,20">
+            <Label FontSize="20" Text="{Binding p.Preg1}" HorizontalTextAlignment="Center"></Label>
+            <StackLayout>
+                <Image Source=""></Image>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Image Source="LOGO" HeightRequest="35"></Image>
+                <Button Command="{Binding Votar1Command}" BackgroundColor="Firebrick">
+                    <Button.CommandParameter>
+                        <sys:Int32>1</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Command="{Binding Votar1Command}" BackgroundColor="LightCoral">
+                    <Button.CommandParameter>
+                        <sys:Int32>2</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Command="{Binding Votar1Command}" BackgroundColor="AliceBlue">
+                    <Button.CommandParameter>
+                        <sys:Int32>3</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Command="{Binding Votar1Command}" BackgroundColor="LightBlue">
+                    <Button.CommandParameter>
+                        <sys:Int32>4</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Command="{Binding Votar1Command}" BackgroundColor="DeepSkyBlue">
+                    <Button.CommandParameter>
+                        <sys:Int32>5</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Image Source="LOGO" HeightRequest="35"></Image>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Margin="0,20">
+            <Label FontSize="20" Text="{Binding p.Preg2}" HorizontalTextAlignment="Center"></Label>
+            <StackLayout>
+                <Image Source=""></Image>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Image Source="LOGO" HeightRequest="35"></Image>
+                <Button Command="{Binding Votar2Command}" BackgroundColor="Firebrick">
+                    <Button.CommandParameter>
+                        <sys:Int32>1</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Command="{Binding Votar2Command}" BackgroundColor="LightCoral">
+                    <Button.CommandParameter>
+                        <sys:Int32>2</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Command="{Binding Votar2Command}" BackgroundColor="AliceBlue">
+                    <Button.CommandParameter>
+                        <sys:Int32>3</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Command="{Binding Votar2Command}" BackgroundColor="LightBlue">
+                    <Button.CommandParameter>
+                        <sys:Int32>4</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Command="{Binding Votar2Command}" BackgroundColor="DeepSkyBlue">
+                    <Button.CommandParameter>
+                        <sys:Int32>5</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Image Source="LOGO" HeightRequest="35"></Image>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Margin="0,20">
+            <Label FontSize="20" Text="{Binding p.Preg3}" HorizontalTextAlignment="Center"></Label>
+            <StackLayout>
+                <Image Source=""></Image>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Image Source="LOGO" HeightRequest="35"></Image>
+                <Button Command="{Binding Votar3Command}" BackgroundColor="Firebrick">
+                    <Button.CommandParameter>
+                        <sys:Int32>1</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Command="{Binding Votar3Command}" BackgroundColor="LightCoral">
+                    <Button.CommandParameter>
+                        <sys:Int32>2</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Command="{Binding Votar3Command}" BackgroundColor="AliceBlue">
+                    <Button.CommandParameter>
+                        <sys:Int32>3</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Command="{Binding Votar3Command}" BackgroundColor="LightBlue">
+                    <Button.CommandParameter>
+                        <sys:Int32>4</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Command="{Binding Votar3Command}" BackgroundColor="DeepSkyBlue">
+                    <Button.CommandParameter>
+                        <sys:Int32>5</sys:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Image Source="LOGO" HeightRequest="35"></Image>
+            </StackLayout>
+        </StackLayout>
+
+
+        <Button Command="{Binding VotarCommand}" Margin="50,20"
+                Text="Enviar Opinión"></Button>
+
+        <Label Text="{Binding Error}" TextColor="Red"></Label>
+
+    </StackLayout>
+</ContentPage>

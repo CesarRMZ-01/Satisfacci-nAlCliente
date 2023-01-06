@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\FONDO.png" />
+    <None Remove="Assets\Insanibu.ttf" />
+    <None Remove="Assets\Star.png" />
+    <None Remove="Assets\User.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\FONDO.png" />
+    <Resource Include="Assets\Insanibu.ttf" />
+    <Resource Include="Assets\Star.png" />
+    <Resource Include="Assets\User.png" />
+  </ItemGroup>
+
+</Project>

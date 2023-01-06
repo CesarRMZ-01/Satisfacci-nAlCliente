@@ -1,0 +1,218 @@
+﻿<Window x:Class="Servidor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Servidor.ViewModels"
+        xmlns:local="clr-namespace:Servidor"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800" Background="#f5ebdb">
+    <Window.DataContext>
+        <vm:ServidorViewModel></vm:ServidorViewModel>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".6*"></ColumnDefinition>
+            <ColumnDefinition Width=".03*"></ColumnDefinition>
+            <ColumnDefinition Width="0.32*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="/Assets/#Insaniburger"></Setter>
+                <Setter Property="Foreground" Value="#502314"></Setter>
+            </Style>
+        </Grid.Resources>
+        
+        <DockPanel Margin="10">
+            <TextBlock DockPanel.Dock="Top"
+                       FontSize="20" 
+                       Text="{Binding preguntas.Preg1}"></TextBlock>
+            <Grid Margin="0 10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".3*"></ColumnDefinition>
+                    <ColumnDefinition Width=".05*"></ColumnDefinition>
+                    <ColumnDefinition Width=".05*"></ColumnDefinition>
+                    <ColumnDefinition Width=".6*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="7" Grid.RowSpan="2"
+                           FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   Text="{Binding Total}"></TextBlock>
+                <Image Grid.RowSpan="6" Source="/Assets/User.png" Stretch="Uniform"
+                       HorizontalAlignment="Center"></Image>
+
+                <ProgressBar Foreground="Orange" Grid.Row="0" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot5P1}"></ProgressBar>
+                <ProgressBar Foreground="Orange" Grid.Row="2" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot4P1}"></ProgressBar>
+                <ProgressBar Foreground="Orange" Grid.Row="4" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot3P1}"></ProgressBar>
+                <ProgressBar Foreground="Orange" Grid.Row="6" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot2P1}"></ProgressBar>
+                <ProgressBar Foreground="Orange" Grid.Row="8" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot1P1}"></ProgressBar>
+
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="0" Grid.Column="1" Text="5"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="2" Grid.Column="1" Text="4"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="4" Grid.Column="1" Text="3"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="6" Grid.Column="1" Text="2"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="8" Grid.Column="1" Text="1"></TextBlock>
+
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left"></Image>
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left" Grid.Row="2"></Image>
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left" Grid.Row="4"></Image>
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left" Grid.Row="6"></Image>
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left" Grid.Row="8"></Image>
+               
+            </Grid>
+
+        </DockPanel>
+        <DockPanel Margin="10" Grid.Row="1">
+            <TextBlock DockPanel.Dock="Top"
+                       FontSize="20" 
+                       Text="{Binding preguntas.Preg2}"></TextBlock>
+            <Grid Margin="0 10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".3*"></ColumnDefinition>
+                    <ColumnDefinition Width=".05*"></ColumnDefinition>
+                    <ColumnDefinition Width=".05*"></ColumnDefinition>
+                    <ColumnDefinition Width=".6*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="7" Grid.RowSpan="2"
+                           FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   Text="{Binding Total}"></TextBlock>
+                <Image Grid.RowSpan="6" Source="/Assets/User.png" Stretch="Uniform"
+                       HorizontalAlignment="Center"></Image>
+
+                <ProgressBar Foreground="Orange" Grid.Row="0" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot5P2}"></ProgressBar>
+                <ProgressBar Foreground="Orange" Grid.Row="2" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot4P2}"></ProgressBar>
+                <ProgressBar Foreground="Orange" Grid.Row="4" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot3P2}"></ProgressBar>
+                <ProgressBar Foreground="Orange" Grid.Row="6" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot2P2}"></ProgressBar>
+                <ProgressBar Foreground="Orange" Grid.Row="8" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot1P2}"></ProgressBar>
+
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="0" Grid.Column="1" Text="5"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="2" Grid.Column="1" Text="4"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="4" Grid.Column="1" Text="3"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="6" Grid.Column="1" Text="2"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="8" Grid.Column="1" Text="1"></TextBlock>
+
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left"></Image>
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left" Grid.Row="2"></Image>
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left" Grid.Row="4"></Image>
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left" Grid.Row="6"></Image>
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left" Grid.Row="8"></Image>
+
+            </Grid>
+
+        </DockPanel>
+        <DockPanel Margin="10" Grid.Row="2">
+            <TextBlock DockPanel.Dock="Top"
+                       FontSize="20" 
+                       Text="{Binding preguntas.Preg3}"></TextBlock>
+            <Grid Margin="0 10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".3*"></ColumnDefinition>
+                    <ColumnDefinition Width=".05*"></ColumnDefinition>
+                    <ColumnDefinition Width=".05*"></ColumnDefinition>
+                    <ColumnDefinition Width=".6*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="7" Grid.RowSpan="2"
+                           FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   Text="{Binding Total}"></TextBlock>
+                <Image Grid.RowSpan="6" Source="/Assets/User.png" Stretch="Uniform"
+                       HorizontalAlignment="Center"></Image>
+
+                <ProgressBar Foreground="Orange" Grid.Row="0" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot5P3}"></ProgressBar>
+                <ProgressBar Foreground="Orange" Grid.Row="2" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot4P3}"></ProgressBar>
+                <ProgressBar Foreground="Orange" Grid.Row="4" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot3P3}"></ProgressBar>
+                <ProgressBar Foreground="Orange" Grid.Row="6" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot2P3}"></ProgressBar>
+                <ProgressBar Foreground="Orange" Grid.Row="8" Grid.Column="3" Maximum="{Binding Total}" Value="{Binding Vot1P3}"></ProgressBar>
+
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="0" Grid.Column="1" Text="5"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="2" Grid.Column="1" Text="4"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="4" Grid.Column="1" Text="3"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="6" Grid.Column="1" Text="2"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Grid.Row="8" Grid.Column="1" Text="1"></TextBlock>
+
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left"></Image>
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left" Grid.Row="2"></Image>
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left" Grid.Row="4"></Image>
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left" Grid.Row="6"></Image>
+                <Image Source="/Assets/Star.png"
+                       Grid.Column="2" HorizontalAlignment="Left" Grid.Row="8"></Image>
+
+            </Grid>
+
+        </DockPanel>
+
+        <Image Grid.Column="2" Grid.RowSpan="3"
+               Source="/Assets/FONDO.png" Stretch="UniformToFill"></Image>
+    </Grid>
+</Window>
